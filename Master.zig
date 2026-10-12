@@ -12,7 +12,7 @@ pub fn main(init: std.process.Init) !void {
     var listener = try host.listen(io, .{ .reuse_address = true });
     defer listener.deinit(io);
 
-    log("ReversalCounterpact running in {d}!\n", .{PORT});
+    log("ReversalPS running in {d}!\n", .{PORT});
 
     while (true) {
         const conn = listener.accept(io) catch continue;
